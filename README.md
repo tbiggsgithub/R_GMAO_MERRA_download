@@ -5,9 +5,12 @@ Go to website:  http://disc.gsfc.nasa.gov/SSW/
 
  Click "Select Data Sets", expand "Goddard Earth Sciences Data and Information Services Center"
     -->  MERRA
+    
     choose both 
+    
 	1 MAT1NXRAD v5.2.0   2/3 degree latitude x 1/2 degree latitude
-  	2 MAT1NXSLV  (Wind, temp)  
+  	2 MAT1NXSLV  (Wind, temp)
+  	
   Metadata is at http://disc.sci.gsfc.nasa.gov/mdisc/documentation/README.MERRA.pdf
 
   Click "Choose"
