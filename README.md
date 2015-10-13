@@ -15,6 +15,7 @@ Go to website:  http://disc.gsfc.nasa.gov/SSW/
   Click on the + in front of "Subset: Spatial Region..."
   
   In list of variables, select 
+  
 	  MAT1NXRAD
 		  Absorbed longwave at the surface LWGAB = LWin
 		  Diffuse beam VIS-UV surface albedo  ALBVISDF
