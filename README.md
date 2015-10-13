@@ -8,11 +8,13 @@ Go to website:  http://disc.gsfc.nasa.gov/SSW/
     
     choose both 
     
-	1 MAT1NXRAD v5.2.0   2/3 degree latitude x 1/2 degree latitude
+	1 MAT1NXRAD
   	2 MAT1NXSLV  (Wind, temp)
   	
   Metadata is at http://disc.sci.gsfc.nasa.gov/mdisc/documentation/README.MERRA.pdf
-
+ 
+  Grids are 2/3 degree latitude x 1/2 degree latitude
+  
   Click "Choose"
   
   Select dates and geographic area of interest
