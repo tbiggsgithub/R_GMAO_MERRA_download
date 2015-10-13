@@ -1,6 +1,10 @@
 # R_GMAO_MERRA_download
 Instructions for downloading GMAO/MERRA data and R script to automate file transfer
 
+Metadata for GMAO-MERRA is at http://disc.sci.gsfc.nasa.gov/mdisc/documentation/README.MERRA.pdf
+
+Grids are 2/3 degree latitude x 1/2 degree latitude
+
 Go to website:  http://disc.gsfc.nasa.gov/SSW/
 
  Click "Select Data Sets", expand "Goddard Earth Sciences Data and Information Services Center"
@@ -11,10 +15,6 @@ Go to website:  http://disc.gsfc.nasa.gov/SSW/
 	1 MAT1NXRAD
   	2 MAT1NXSLV  (Wind, temp)
   	
-  Metadata is at http://disc.sci.gsfc.nasa.gov/mdisc/documentation/README.MERRA.pdf
- 
-  Grids are 2/3 degree latitude x 1/2 degree latitude
-  
   Click "Choose"
   
   Select dates and geographic area of interest
