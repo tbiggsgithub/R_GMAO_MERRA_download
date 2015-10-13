@@ -11,7 +11,9 @@ Go to website:  http://disc.gsfc.nasa.gov/SSW/
   Metadata is at http://disc.sci.gsfc.nasa.gov/mdisc/documentation/README.MERRA.pdf
 
   Click "Choose"
+  
   Select dates and geographic area of interest
+  
   Click on the + in front of "Subset: Spatial Region..."
   
   In list of variables, select 
@@ -32,10 +34,14 @@ Go to website:  http://disc.gsfc.nasa.gov/SSW/
 		  V10M  Northward wind at 10m
 		  U2M   eww at 2m
 		  V2m   nww at 2m
-  Use netCDF format
+  Choose netCDF format
+  
   Then "Subset selected datasets"
+  
   	"View subset results"
+  	
   	Click on "Get list of urls"
+  	
   "Save page" as an .inp file in the workd that you specified below (e.g. "filename.inp")
   
   In R:
