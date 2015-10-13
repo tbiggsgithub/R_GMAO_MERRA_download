@@ -1,14 +1,20 @@
 # R_GMAO_MERRA_download
 Instructions for downloading GMAO/MERRA data and R script to automate file transfer
 
- Under Select Data Sets, choose "Goddard Earth Sciences Data and Information Services Center"
-   MERRA, choose both 
-	  1 MAT1NXRAD v5.2.0   2/3 degree latitude x 1/2 degree latitude
-  	2 MAT1NXSLV  (Wind, temp)  
+Go to website:  http://disc.gsfc.nasa.gov/SSW/
 
+ Click "Select Data Sets", expand "Goddard Earth Sciences Data and Information Services Center"
+    -->  MERRA
+    choose both 
+	1 MAT1NXRAD v5.2.0   2/3 degree latitude x 1/2 degree latitude
+  	2 MAT1NXSLV  (Wind, temp)  
   Metadata is at http://disc.sci.gsfc.nasa.gov/mdisc/documentation/README.MERRA.pdf
 
-  In list of variables on the website, select 
+  Click "Choose"
+  Select dates and geographic area of interest
+  Click on the + in front of "Subset: Spatial Region..."
+  
+  In list of variables, select 
 	  MAT1NXRAD
 		  Absorbed longwave at the surface LWGAB = LWin
 		  Diffuse beam VIS-UV surface albedo  ALBVISDF
@@ -26,20 +32,21 @@ Instructions for downloading GMAO/MERRA data and R script to automate file trans
 		  U2M   eww at 2m
 		  V2m   nww at 2m
   Use netCDF format
-
-  Save the resulting .inp file in the workd that you specified below
+  Then "Subset selected datasets"
+  	"View subset results"
+  	Click on "Get list of urls"
+  "Save page" as an .inp file in the workd that you specified below (e.g. "filename.inp")
   
   In R:
   ```R
-  library(RCurl)
+library(RCurl)
 library(rgdal)
 
-workd = "C:/Users/tbiggs/AppData/GMAO_downloads/CA_LW/" # Diretory with the .inp file
+workd = "C:/Users/tbiggs/AppData/GMAO_downloads/CA/" # Diretory with the .inp file
   #  netCDF files will be downloaded here
-indir=workd
 url.list = "filename.inp"  # filename you saved the .inp file as
 
-file.list = read.table(paste(indir,url.list,sep=""))
+file.list = read.table(paste(workd,url.list,sep=""))
 food = unlist(file.list)
 
 for (j in 1:length(food)){
