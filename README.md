@@ -49,7 +49,7 @@ Go to website:  http://disc.gsfc.nasa.gov/SSW/
   	
   "Save page" as an .inp file in the workd that you specified below (e.g. "filename.inp")
   
-  In R:
+  In R: (note: as of 10/29/2015, this no longer works)
   ```R
 library(RCurl)
 library(rgdal)
