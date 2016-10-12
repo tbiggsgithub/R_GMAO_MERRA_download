@@ -1,5 +1,5 @@
-# R_GMAO_MERRA_download
-Instructions for downloading GMAO/MERRA data and R script to automate file transfer
+# GMAO_MERRA_download
+Instructions for downloading GMAO/MERRA data for use with SEBAL
 
 Metadata for GMAO-MERRA is at http://disc.sci.gsfc.nasa.gov/mdisc/documentation/README.MERRA.pdf
 
@@ -49,23 +49,5 @@ Go to website:  http://disc.gsfc.nasa.gov/SSW/
   	
   "Save page" as an .inp file in the workd that you specified below (e.g. "filename.inp")
   
-  In R: (note: as of 10/29/2015, this no longer works)
-  ```R
-library(RCurl)
-library(rgdal)
-
-workd = "C:/Users/tbiggs/AppData/GMAO_downloads/CA/" # Diretory with the .inp file
-  #  netCDF files will be downloaded here
-url.list = "filename.inp"  # filename you saved the .inp file as
-
-file.list = read.table(paste(workd,url.list,sep=""))
-food = unlist(file.list)
-
-for (j in 1:length(food)){
-	wgeturl = as.character(file.list[j,])
-	foo1 = strsplit(as.character(file.list[j,]),"/")[[1]][6]
-	foo2 = strsplit(foo1,"&")[[1]][4]
-	dest.fname = strsplit(foo2,"=")[[1]][2]
-	# dest.fname = strsplit(foo,"\\?")[[1]][1]
-	foo = download.file(wgeturl, destfile=paste(workd,dest.fname,sep=""), mode="wb", method='internal')
-}
+  Batch download with a FireFox plugin---see:  
+  http://disc.sci.gsfc.nasa.gov/ssw/documentation/SSW_URL_List_Downloading_Instructions.html
